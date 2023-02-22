@@ -19,7 +19,7 @@ systemctl is-active mysql
 
 systemctl status mysql
 
-echo "[Workbench] : install workbench..."
+echo "[Workbench] : install workbench (it may take a few minutes, please, wait)..."
 
 su - vagrant -c "sudo snap install mysql-workbench-community"
 
