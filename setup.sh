@@ -23,6 +23,25 @@ echo "[Workbench] : install workbench..."
 
 su - vagrant -c "sudo snap install mysql-workbench-community"
 
+echo "[Workbench] : copy workbench icon..."
+
+cp /home/vagrant/project/workbench.png /usr/share/icons/workbench.ico
+
+echo "[Workbench] : create workbench label..."
+
+cat << EOF > /usr/share/applications/workbench.desktop
+[Desktop Entry]
+Name=Workbench
+Comment=Best IDE for MYSQL
+Keywords=workbench
+Exec=mysql-workbench-community
+Terminal=false
+Type=Application
+Icon=/usr/share/icons/workbench.ico
+Categories=System
+NoDiplay=false
+EOF
+
 ### Wbox Guest Addition
 ### Install for clipboard
 ### And 'drag and drop'
