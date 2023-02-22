@@ -29,6 +29,7 @@ help:
 	@echo -e "$(WARN_COLOR)- make re			: Restart configuration"
 	@echo -e "$(WARN_COLOR)- make clean			: Destroy configuration"
 	@echo -e "$(WARN_COLOR)- make fclean			: Forced destroy all$(NO_COLOR)"
+	@vagrant --version
 
 build:
 	@printf "$(OK_COLOR)==== Building configuration ${name}... ====$(NO_COLOR)\n"
